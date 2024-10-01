@@ -3,66 +3,70 @@
 @tailwind utilities;
 
 [effect="ripple"] {
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  [effect="ripple"]:before {
-    content: "";
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    transform-origin: center;
-    top: calc(var(--y) * 1px);
-    left: calc(var(--x) * 1px);
-    width: calc(var(--d) * 1px);
-    height: calc(var(--d) * 1px);
-    background: var(--ripple-background, white);
-    transform: translate(-50%, -50%) scale(var(--s, 1));
-    opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
-    transition: calc(var(--t, 0) * var(--ripple-duration, 300ms))
-      var(--ripple-easing, linear);
-  }
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+[effect="ripple"]:before {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform-origin: center;
+  top: calc(var(--y) * 1px);
+  left: calc(var(--x) * 1px);
+  width: calc(var(--d) * 1px);
+  height: calc(var(--d) * 1px);
+  background: var(--ripple-background, white);
+  transform: translate(-50%, -50%) scale(var(--s, 1));
+  opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+  transition: calc(var(--t, 0) * var(--ripple-duration, 300ms))
+    var(--ripple-easing, linear);
+}
 
 @property --a {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 0deg;
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.calc {
+  transform-style: preserve-3d;
+  transform: perspective(5000px) rotateY(var(--rotateX)) rotateX(var(--rotateY));
 }
 
 button {
-    outline: none;
-    transition: transform, 50ms ease;
+  outline: none;
+  transition: transform, 50ms ease;
 }
 
 button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 section {
-    height: 100vh;
-    background-image: linear-gradient(var(--a), #00e4be,#9e0162, #d8a600);
-    background-size: 400% 400%;
-    animation: bg 15s linear 0s infinite forwards;
+  height: 100vh;
+  background-image: linear-gradient(var(--a), #00e4be, #9e0162, #d8a600);
+  background-size: 400% 400%;
+  animation: bg 15s linear 0s infinite forwards;
 }
 
 @keyframes bg {
-    0% {
-        background-position: 35% 50%;
-        --a: 0deg;
-    }
-    50% {
-        background-position: 75% 50%;
-
-    }
-    100% {
-        background-position: 35% 50%;
-        --a: 360deg;
-    }
+  0% {
+    background-position: 35% 50%;
+    --a: 0deg;
+  }
+  50% {
+    background-position: 75% 50%;
+  }
+  100% {
+    background-position: 35% 50%;
+    --a: 360deg;
+  }
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./src/all.min.css" />
     <link rel="shortcut icon" href="./src/assets/icon.png" type="image/x-icon">
     <title>Calculator</title>
@@ -11,7 +12,7 @@
   <body>
     <section class="flex justify-center items-center">
       <div
-        class="calc flex flex-col gap-2 p-4 w-[420px] bg-white/30 backdrop-blur-lg shadow-2xl rounded-3xl"
+        class="calc relative selector flex flex-col gap-2 p-4 w-[420px] bg-white/30 backdrop-blur-lg shadow-2xl rounded-3xl"
       >
         <div class="relative">
           <div
@@ -162,6 +163,7 @@
       </div>
     </section>
 
+    <script src="./src/rotate.js"></script>
     <script src="./src/main.js"></script>
   </body>
 </html>
