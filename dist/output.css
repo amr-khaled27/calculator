@@ -598,20 +598,12 @@ video {
   height: 6rem;
 }
 
-.h-\[85px\] {
-  height: 85px;
-}
-
-.h-\[55px\] {
-  height: 55px;
-}
-
 .h-\[65px\] {
   height: 65px;
 }
 
-.w-\[420px\] {
-  width: 420px;
+.h-\[85px\] {
+  height: 85px;
 }
 
 .w-full {
@@ -660,86 +652,20 @@ video {
   border-radius: 1.5rem;
 }
 
-.bg-orange-500\/75 {
-  background-color: rgb(249 115 22 / 0.75);
-}
-
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-white\/50 {
-  background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-white\/30 {
-  background-color: rgb(255 255 255 / 0.3);
-}
-
-.bg-\[\#ADACB5\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(173 172 181 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#153243\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 50 67 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#FABC2A\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 188 42 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#FE9000\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 144 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#FE900060\] {
-  background-color: #FE900060;
-}
-
-.bg-\[\#FE900090\] {
-  background-color: #FE900090;
-}
-
-.bg-\[\#fe9000be\] {
-  background-color: #fe9000be;
-}
-
-.bg-\[\#FE9000be\] {
-  background-color: #FE9000be;
-}
-
-.bg-\[\#dbac10be\] {
-  background-color: #dbac10be;
-}
-
-.bg-\[\#10a2dbbe\] {
-  background-color: #10a2dbbe;
-}
-
-.bg-\[\#F17F29\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 127 41 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#F17F29be\] {
-  background-color: #F17F29be;
-}
-
-.bg-\[\#F17F2980\] {
-  background-color: #F17F2980;
-}
-
 .bg-\[\#F17F29ef\] {
   background-color: #F17F29ef;
 }
 
 .bg-\[\#f18029ef\] {
   background-color: #f18029ef;
+}
+
+.bg-white\/30 {
+  background-color: rgb(255 255 255 / 0.3);
+}
+
+.bg-white\/50 {
+  background-color: rgb(255 255 255 / 0.5);
 }
 
 .p-4 {
@@ -866,30 +792,12 @@ section {
   }
 }
 
-.\*\:h-\[85px\] > * {
-  height: 85px;
-}
-
-.\*\:h-\[55px\] > * {
-  height: 55px;
-}
-
 @media (min-width: 640px) {
   .sm\:h-\[85px\] {
     height: 85px;
   }
 
   .sm\:w-\[420px\] {
-    width: 420px;
-  }
-
-  .sm\:\*\:h-\[85px\] > * {
-    height: 85px;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:w-\[420px\] {
     width: 420px;
   }
 }
