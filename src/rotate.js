@@ -5,6 +5,7 @@ document.addEventListener("mousemove", (e) => {
 });
 
 function rotateElement(event, element) {
+  if (window.innerWidth < 640) return;
   const x = event.clientX;
   const y = event.clientY;
 
