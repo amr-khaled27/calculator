@@ -4,160 +4,175 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/output.css" />
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/index.css" />
     <link rel="stylesheet" href="./src/all.min.css" />
     <link rel="shortcut icon" href="./src/assets/icon.png" type="image/x-icon">
     <title>Calculator</title>
   </head>
   <body>
     <section class="flex justify-center items-center px-4">
-      <div
-        class="calc relative selector flex flex-col gap-2 p-4 w-full sm:w-[420px] bg-white/30 backdrop-blur-lg shadow-2xl rounded-3xl"
-      >
-        <div class="relative">
-          <div
-            class="screen overflow-auto p-4 font-semibold text-4xl bg-white/50 h-24 rounded-3xl flex items-center shadow-md"
-          ></div>
-          <p
-            class="prevNum select-none pointer-events-none absolute top-2 right-2 text-2xl"
-          ></p>
+      <div class="wrapper flex justify-center items-center gap-4 flex-row-reverse">
+        <div class="bg-white/30 backdrop-blur-lg rounded-3xl p-4">
+          <button
+            effect="ripple"
+            class="bg-white/50 rounded-3xl text-3xl shadow-md w-20 h-20 flex justify-center items-center col-span-2"
+          >
+            Sin
+          </button>
         </div>
 
-        <div class="controls grid grid-cols-4 gap-2 text-3xl">
-          <div class="top col-span-4 grid grid-cols-4 gap-2 text-white">
-            <button
-              clear
-              effect="ripple"
-              class="bg-[#f18029ef] rounded-3xl shadow-md h-[85px] col-span-2"
-            >
-              C
-            </button>
-            <button
-              effect="ripple"
-              class="del bg-[#F17F29ef] rounded-3xl shadow-md h-[85px] col-span-2"
-            >
-              <i class="fa-solid fa-delete-left"></i>
-            </button>
-          </div>
+        <button effect="ripple" class="w-14 h-14 flex justify-center items-center rounded-3xl bg-white/30 backdrop-blur-lg text-white text-xl shadow-2xl">
+          <i class="fa-solid fa-caret-right"></i>
+        </button>
 
-          <div class="nums grid grid-cols-3 col-span-3 gap-2">
-            <button
-              data-btn="7"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              7
-            </button>
-            <button
-              data-btn="8"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              8
-            </button>
-            <button
-              data-btn="9"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              9
-            </button>
-            <button
-              data-btn="4"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              4
-            </button>
-            <button
-              data-btn="5"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              5
-            </button>
-            <button
-              data-btn="6"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              6
-            </button>
-            <button
-              data-btn="1"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              1
-            </button>
-            <button
-              data-btn="2"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              2
-            </button>
-            <button
-              data-btn="3"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              3
-            </button>
+        <div
+          class="calc relative selector flex flex-col gap-2 p-4 w-full sm:w-[420px] bg-white/30 backdrop-blur-lg shadow-2xl rounded-3xl"
+        >
+          <div class="relative">
+            <div
+              class="screen overflow-auto p-4 font-semibold text-4xl bg-white/50 h-24 rounded-3xl flex items-center shadow-md"
+            ></div>
+            <p
+              class="prevNum select-none pointer-events-none absolute top-2 right-2 text-2xl"
+            ></p>
           </div>
-
-          <div class="ops grid grid-cols-1 gap-2">
-            <button
-              op="/"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              /
-            </button>
-            <button
-              op="X"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              &#x2715
-            </button>
-            <button
-              op="-"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              -
-            </button>
-          </div>
-          <div class="ops grid grid-cols-4 col-span-4 gap-2">
-            <button
-              data-btn="0"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              0
-            </button>
-            <button
-              data-btn="."
-              effect="ripple"
-              class="dot bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              .
-            </button>
-            <button
-              op="+"
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              +
-            </button>
-            <button
-              equal
-              effect="ripple"
-              class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
-            >
-              =
-            </button>
+  
+          <div class="controls grid grid-cols-4 gap-2 text-3xl">
+            <div class="top col-span-4 grid grid-cols-4 gap-2 text-white">
+              <button
+                clear
+                effect="ripple"
+                class="bg-[#f18029ef] rounded-3xl shadow-md h-[85px] col-span-2"
+              >
+                C
+              </button>
+              <button
+                effect="ripple"
+                class="del bg-[#F17F29ef] rounded-3xl shadow-md h-[85px] col-span-2"
+              >
+                <i class="fa-solid fa-delete-left"></i>
+              </button>
+            </div>
+  
+            <div class="nums grid grid-cols-3 col-span-3 gap-2">
+              <button
+                data-btn="7"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                7
+              </button>
+              <button
+                data-btn="8"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                8
+              </button>
+              <button
+                data-btn="9"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                9
+              </button>
+              <button
+                data-btn="4"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                4
+              </button>
+              <button
+                data-btn="5"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                5
+              </button>
+              <button
+                data-btn="6"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                6
+              </button>
+              <button
+                data-btn="1"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                1
+              </button>
+              <button
+                data-btn="2"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                2
+              </button>
+              <button
+                data-btn="3"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                3
+              </button>
+            </div>
+  
+            <div class="ops grid grid-cols-1 gap-2">
+              <button
+                op="/"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                /
+              </button>
+              <button
+                op="X"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                &#x2715
+              </button>
+              <button
+                op="-"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                -
+              </button>
+            </div>
+            <div class="ops grid grid-cols-4 col-span-4 gap-2">
+              <button
+                data-btn="0"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                0
+              </button>
+              <button
+                data-btn="."
+                effect="ripple"
+                class="dot bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                .
+              </button>
+              <button
+                op="+"
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                +
+              </button>
+              <button
+                equal
+                effect="ripple"
+                class="bg-white/50 rounded-3xl shadow-md h-[65px] sm:h-[85px]"
+              >
+                =
+              </button>
+            </div>
           </div>
         </div>
       </div>

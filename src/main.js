@@ -41,8 +41,13 @@ class Calculator {
 
   chooseOp(operation) {
     this.equal = false;
-    if (this.current_num == "") return;
-    if (this.prev_num != "") {
+    if (this.current_num === "" && operation === "-") {
+      this.current_num = "-";
+      this.updateDisplay();
+      return;
+    }
+    if (this.current_num === "") return;
+    if (this.prev_num !== "") {
       this.compute();
     }
     this.operation = operation;
@@ -97,8 +102,7 @@ class Calculator {
   updateDisplay() {
     screen.innerText = this.getDisplayNumber(this.current_num);
     if (this.operation !== undefined) {
-      prevNum.innerText =
-        this.getDisplayNumber(this.prev_num) + " " + this.operation;
+      prevNum.innerText = this.getDisplayNumber(this.prev_num) + " " + this.operation;
     }
   }
 }

@@ -1,4 +1,6 @@
-const frame = document.querySelector(".calc");
+const frame = document.querySelector(".wrapper");
+
+console.log(frame);
 
 document.addEventListener("mousemove", (e) => {
   rotateElement(e, frame);
