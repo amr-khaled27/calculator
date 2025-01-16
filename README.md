@@ -16,16 +16,6 @@
   • Tailwind CSS: For styling the calculator elements with a utility-first approach.
   • Vanilla JavaScript: For handling calculations and user interactions.
  
- ## Project Structure
- 
-calculator/
-  ├── index.html      
-  ├── src/
-  │   ├── main.js   
-  │   └── ripple.js 
-  └── dist/
-      └── output.css
- 
 ## Image
 
 ![swappy-20250116_235911](https://github.com/user-attachments/assets/1ad12f16-4421-4f90-9a75-f63db2f900d2)
