@@ -5,10 +5,10 @@
  
  ## Features
  
-  • Basic Arithmetic Operations: Addition, Subtraction, Multiplication, and Division.
-  • Clear and Simple Interface: Designed with ease of use in mind.
-  • Responsive Layout: Adapts well to different screen sizes.
-  • Keyboard Support: You can calculate faster using your keyboard.
+ - Basic Arithmetic Operations: Addition, Subtraction, Multiplication, and Division.
+ - Clear and Simple Interface: Designed with ease of use in mind.
+ - Responsive Layout: Adapts well to different screen sizes.
+ - Keyboard Support: You can calculate faster using your keyboard.
  
 ## Image
 
